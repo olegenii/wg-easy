@@ -202,6 +202,19 @@ PrivateKey = ${client.privateKey ? `${client.privateKey}` : 'REPLACE_ME'}
 Address = ${client.address}/24
 ${WG_DEFAULT_DNS ? `DNS = ${WG_DEFAULT_DNS}\n` : ''}\
 ${WG_MTU ? `MTU = ${WG_MTU}\n` : ''}\
+#
+# AmneziaWG required this additional keys being added to config
+# https://habr.com/ru/companies/amnezia/articles/807539/
+#
+Jc = 3
+Jmin = 5
+Jmax = 15
+S1 = 0
+S2 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
 
 [Peer]
 PublicKey = ${config.server.publicKey}
